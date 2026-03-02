@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://images.unsplash.com https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self'; font-src https://fonts.gstatic.com;">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="ШаурМания — доставка сочной шаурмы по Минску за 45 минут. Свежее мясо, авторские соусы, халяль. Заказывай онлайн!">
+  <meta name="keywords" content="шаурма Минск, доставка шаурмы Минск, заказать шаурму">
+  <meta property="og:title" content="ШаурМания — Доставка шаурмы в Минске">
+  <meta property="og:description" content="Сочная шаурма за 45 минут. Свежее мясо, авторские соусы.">
+  <meta property="og:type" content="website">
+  <title>ШаурМания — Доставка шаурмы в Минске</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Шаур<span>Мания</span></div>
+  <ul class="nav-links">
+    <li><a href="#promo">Акции</a></li>
+    <li><a href="#menu">Меню</a></li>
+    <li><a href="#delivery">Доставка</a></li>
+    <li><a href="#reviews">Отзывы</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <button class="nav-cta" onclick="scrollToSection('menu')">Заказать</button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-badge">🔥 Доставка по Минску</div>
+    <h1>Сочная шаурма<br>за <span>45 минут</span> к вашей двери</h1>
+    <p>Готовим из фермерского мяса на углях. Авторские соусы. Только свежие ингредиенты.<br>Дарим напиток к первому заказу!</p>
+    <div class="hero-btns">
+      <a href="#menu" class="btn-primary">🌯 Выбрать шаурму</a>
+      <a href="tel:+3752212345678" class="btn-outline">📞 Позвонить</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">45 мин</div><div class="stat-label">Среднее время доставки</div></div>
+      <div class="stat"><div class="stat-num">4.9 ★</div><div class="stat-label">Рейтинг на Google Maps</div></div>
+      <div class="stat"><div class="stat-num">12 000+</div><div class="stat-label">Довольных клиентов</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO -->
+<section id="promo">
+  <h2 class="section-title" style="color:#fff">Горячие <span class="accent">акции</span></h2>
+  <p class="section-sub">Успей заказать по выгодной цене</p>
+  <div class="promo-grid">
+    <div class="promo-card" style="background-image:url('https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=600&q=80')">
+      <div class="promo-info"><span class="promo-tag">ХИТ</span><h3>1+1=3 по будням</h3><p>Закажи 2 шаурмы — получи третью в подарок</p></div>
+    </div>
+    <div class="promo-card" style="background-image:url('https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&q=80')">
+      <div class="promo-info"><span class="promo-tag">ОФИС</span><h3>Комбо для офиса</h3><p>5 шаурм + 5 напитков = скидка 20%</p></div>
+    </div>
+    <div class="promo-card" style="background-image:url('https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&q=80')">
+      <div class="promo-info"><span class="promo-tag">САМОВЫВОЗ</span><h3>Скидка 15%</h3><p>При самовывозе — скидка 15% на весь заказ</p></div>
+    </div>
+    <div class="promo-card" style="background-image:url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80')">
+      <div class="promo-info"><span class="promo-tag">ПЕРВЫЙ ЗАКАЗ</span><h3>Напиток в подарок</h3><p>При первом заказе — напиток 0.5л бесплатно</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <h2 class="section-title">Наше <span class="accent">меню</span></h2>
+  <p class="section-sub">Всё готовится свежим — никакой заморозки</p>
+  <div class="menu-tabs">
+    <button class="tab-btn active" onclick="filterMenu('all', this)">Все</button>
+    <button class="tab-btn" onclick="filterMenu('classic', this)">Классика</button>
+    <button class="tab-btn" onclick="filterMenu('spicy', this)">Острая</button>
+    <button class="tab-btn" onclick="filterMenu('cheese', this)">Сырная</button>
+    <button class="tab-btn" onclick="filterMenu('veg', this)">Вегетарианская</button>
+  </div>
+  <div class="menu-grid" id="menuGrid">
+    <div class="menu-card" data-cat="classic">
+      <img class="menu-img" src="https://images.unsplash.com/photo-1561651823-34feb02250e4?w=600&q=80" alt="Классическая шаурма" loading="lazy">
+      <div class="menu-body">
+        <h3>Классическая</h3>
+        <p>Куриное филе, свежие овощи, маринованные огурцы, авторский белый соус</p>
+        <div class="menu-footer">
+          <div><div class="price">6.50 руб</div><div class="weight">350 г</div></div>
+          <button class="add-btn" aria-label="Добавить в корзину" onclick="addToCart(this, 'Классическая', 6.50)">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card" data-cat="spicy">
+      <img class="menu-img" src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&q=80" alt="Острая шаурма" loading="lazy">
+      <div class="menu-body">
+        <h3>Огненная</h3>
+        <p>Говядина, халапеньо, острый соус чили, красный лук, томаты, кинза</p>
+        <div class="menu-footer">
+          <div><div class="price">7.90 руб</div><div class="weight">380 г</div></div>
+          <button class="add-btn" aria-label="Добавить в корзину" onclick="addToCart(this, 'Огненная', 7.90)">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card" data-cat="cheese">
+      <img class="menu-img" src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&q=80" alt="Сырная шаурма" loading="lazy">
+      <div class="menu-body">
+        <h3>Сырная двойная</h3>
+        <p>Куриное филе, двойной сыр моцарелла, томаты, соус цезарь, хрустящий лаваш</p>
+        <div class="menu-footer">
+          <div><div class="price">8.50 руб</div><div class="weight">400 г</div></div>
+          <button class="add-btn" aria-label="Добавить в корзину" onclick="addToCart(this, 'Сырная двойная', 8.50)">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card" data-cat="veg">
+      <img class="menu-img" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="Вегетарианская шаурма" loading="lazy">
+      <div class="menu-body">
+        <h3>Вегетарианская</h3>
+        <p>Фалафель, хумус, свежие овощи, авокадо, соус тахини, зелень</p>
+        <div class="menu-footer">
+          <div><div class="price">6.90 руб</div><div class="weight">320 г</div></div>
+          <button class="add-btn" aria-label="Добавить в корзину" onclick="addToCart(this, 'Вегетарианская', 6.90)">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card" data-cat="classic">
+      <img class="menu-img" src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=600&q=80" alt="Шаурма XL" loading="lazy">
+      <div class="menu-body">
+        <h3>Шаурма XL</h3>
+        <p>Двойная порция мяса, все виды овощей, три вида соуса, двойной лаваш</p>
+        <div class="menu-footer">
+          <div><div class="price">10.90 руб</div><div class="weight">550 г</div></div>
+          <button class="add-btn" aria-label="Добавить в корзину" onclick="addToCart(this, 'Шаурма XL', 10.90)">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card" data-cat="spicy">
+      <img class="menu-img" src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&q=80" alt="Шаурма Барбекю" loading="lazy">
+      <div class="menu-body">
+        <h3>Барбекю</h3>
+        <p>Говядина на углях, соус BBQ, маринованный лук, корнишоны, листья салата</p>
+        <div class="menu-footer">
+          <div><div class="price">8.90 руб</div><div class="weight">390 г</div></div>
+          <button class="add-btn" aria-label="Добавить в корзину" onclick="addToCart(this, 'Барбекю', 8.90)">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <h2 class="section-title">Почему выбирают <span class="accent">нас</span></h2>
+  <p class="section-sub">Мы не просто делаем шаурму — мы делаем её правильно</p>
+  <div class="why-grid">
+    <div class="why-card"><div class="why-icon">🥩</div><h3>Только свежее мясо</h3><p>Никакой заморозки. Маринуем сами по авторскому рецепту каждое утро</p></div>
+    <div class="why-card"><div class="why-icon">🫙</div><h3>Авторские соусы</h3><p>Не используем магазинный майонез. Все соусы готовим сами по секретным рецептам</p></div>
+    <div class="why-card"><div class="why-icon">🔥</div><h3>Готовим на углях</h3><p>Настоящий вертел с углями — мясо получается сочным с хрустящей корочкой</p></div>
+    <div class="why-card"><div class="why-icon">⚡</div><h3>Быстрая доставка</h3><p>Доставляем в термосумках — шаурма приедет горячей, а не просто тёплой</p></div>
+    <div class="why-card"><div class="why-icon">🧼</div><h3>Чистота и контроль</h3><p>Открытая кухня, работаем в перчатках. Ежедневный контроль качества</p></div>
+    <div class="why-card"><div class="why-icon">🌿</div><h3>Халяль продукты</h3><p>Всё мясо сертифицировано халяль. Подходит для всех вероисповеданий</p></div>
+  </div>
+</section>
+
+<!-- DELIVERY -->
+<section id="delivery">
+  <h2 class="section-title">Зоны <span class="accent">доставки</span></h2>
+  <p class="section-sub">Доставляем по всему Минску и ближайшим районам</p>
+  <div class="delivery-wrap">
+    <div class="delivery-map">
+      <div class="map-overlay"><span class="map-pin">📍</span></div>
+    </div>
+    <div class="delivery-info">
+      <h3>Выберите свою зону</h3>
+      <ul class="zone-list">
+        <li class="zone-item"><div class="zone-dot green"></div><div class="zone-text"><strong>Зелёная зона — до 30 мин</strong><br>Центр, Немига, Октябрьская, Площадь Победы</div></li>
+        <li class="zone-item"><div class="zone-dot yellow"></div><div class="zone-text"><strong>Жёлтая зона — до 45 мин</strong><br>Каменная Горка, Малиновка, Уручье, Серебрянка</div></li>
+        <li class="zone-item"><div class="zone-dot red"></div><div class="zone-text"><strong>Красная зона — до 60 мин</strong><br>Сухарево, Лошица, Шабаны, Колодищи</div></li>
+      </ul>
+      <div class="delivery-conditions">
+        <p>🚚 <strong>Бесплатная доставка</strong> от 20 руб<br>
+        💳 <strong>Оплата:</strong> наличные, карта, ЕРИП<br>
+        🕐 <strong>Работаем:</strong> ежедневно с 10:00 до 02:00<br>
+        📦 <strong>Минимальный заказ:</strong> 8 руб</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <h2 class="section-title">Как мы <span class="accent">готовим</span></h2>
+  <p class="section-sub">Открытая кухня — нам нечего скрывать</p>
+  <div class="process-grid">
+    <div class="process-step">
+      <span class="step-num">1</span>
+      <img class="step-img" src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400&q=80" alt="Маринование мяса" loading="lazy">
+      <h3>Маринуем мясо</h3><p>Каждое утро маринуем свежее мясо по авторскому рецепту с 12 специями</p>
+    </div>
+    <div class="process-step">
+      <span class="step-num">2</span>
+      <img class="step-img" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80" alt="Жарим на вертеле" loading="lazy">
+      <h3>Жарим на вертеле</h3><p>Настоящий вертел с углями — мясо готовится равномерно и получает хрустящую корочку</p>
+    </div>
+    <div class="process-step">
+      <span class="step-num">3</span>
+      <img class="step-img" src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=400&q=80" alt="Свежие овощи" loading="lazy">
+      <h3>Нарезаем овощи</h3><p>Только свежие овощи — нарезаем прямо перед сборкой каждой шаурмы</p>
+    </div>
+    <div class="process-step">
+      <span class="step-num">4</span>
+      <img class="step-img" src="https://images.unsplash.com/photo-1561651823-34feb02250e4?w=400&q=80" alt="Собираем шаурму" loading="lazy">
+      <h3>Собираем с любовью</h3><p>Заворачиваем плотно, поджариваем лаваш до хрустящей корочки на гриле</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <h2 class="section-title">Отзывы <span class="accent">клиентов</span></h2>
+  <p class="section-sub">Более 12 000 довольных заказов — говорят сами за себя</p>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">«Заказываю уже полгода каждую неделю. Шаурма всегда горячая, мясо сочное. Курьер приехал за 35 минут. Лучшая доставка в Минске без вопросов!»</p>
+      <div class="reviewer">
+        <img class="reviewer-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Анна Ковалёва" loading="lazy">
+        <div><div class="reviewer-name">Анна Ковалёва</div><div class="reviewer-source">Google Maps ✓</div></div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">«Огненная шаурма — это просто бомба! Острая, но не убивает вкус мяса. Соус авторский — нигде такого не пробовал. Заказываем офисом каждую пятницу.»</p>
+      <div class="reviewer">
+        <img class="reviewer-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Дмитрий Петров" loading="lazy">
+        <div><div class="reviewer-name">Дмитрий Петров</div><div class="reviewer-source">Instagram ✓</div></div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">«Вегетарианская шаурма — это что-то невероятное! Наконец-то нашла место, где думают о вегетарианцах. Фалафель хрустящий, соус тахини — объедение!»</p>
+      <div class="reviewer">
+        <img class="reviewer-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Мария Сидорова" loading="lazy">
+        <div><div class="reviewer-name">Мария Сидорова</div><div class="reviewer-source">Яндекс.Карты ✓</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <h2 class="section-title">Частые <span class="accent">вопросы</span></h2>
+  <p class="section-sub">Отвечаем на самые популярные вопросы</p>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">Можно ли убрать или заменить ингредиенты? <span class="faq-icon">+</span></div>
+      <div class="faq-a" role="region">Да, конечно! При оформлении заказа укажите в комментарии, что хотите убрать или заменить. Мы учтём все пожелания без доплаты.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">Есть ли бесконтактная оплата и доставка? <span class="faq-icon">+</span></div>
+      <div class="faq-a" role="region">Да! Принимаем оплату картой онлайн, через ЕРИП или наличными курьеру. Бесконтактная доставка — курьер оставит заказ у двери и уведомит вас.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">Что делать, если курьер опоздал? <span class="faq-icon">+</span></div>
+      <div class="faq-a" role="region">Если доставка задержалась более чем на 15 минут от обещанного времени — дарим скидку 10% на следующий заказ. Позвоните нам, и мы всё решим.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">Есть ли халяль продукты? <span class="faq-icon">+</span></div>
+      <div class="faq-a" role="region">Да! Всё мясо сертифицировано халяль. У нас есть соответствующие документы, которые можно запросить при заказе.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">Как долго хранится шаурма после доставки? <span class="faq-icon">+</span></div>
+      <div class="faq-a" role="region">Рекомендуем съесть сразу — так вкуснее всего! Если нужно сохранить, уберите в холодильник и разогрейте на сковороде в течение 2 часов.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">Работаете ли вы в праздники? <span class="faq-icon">+</span></div>
+      <div class="faq-a" role="region">Да, работаем ежедневно с 10:00 до 02:00, включая все праздники. В Новый год и другие крупные праздники время доставки может быть немного больше.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section id="cta-banner">
+  <h2>Голоден? Мы уже готовим! 🌯</h2>
+  <p>Оформи заказ прямо сейчас и получи напиток в подарок при первом заказе</p>
+  <div class="cta-btns">
+    <a href="#menu" class="btn-white">Заказать сейчас</a>
+    <a href="tel:+3752212345678" class="btn-outline-white">📞 +375 221 234-56-78</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo">Шаур<span>Мания</span></span>
+      <p>Лучшая шаурма в Минске с доставкой. Готовим из свежего мяса на углях по авторским рецептам с 2018 года.</p>
+      <div class="social-links">
+        <a href="#" class="social-btn" aria-label="Instagram">📸</a>
+        <a href="#" class="social-btn" aria-label="Telegram">💬</a>
+        <a href="#" class="social-btn" aria-label="TikTok">🎵</a>
+        <a href="#" class="social-btn" aria-label="YouTube">▶️</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Меню</h4>
+      <ul>
+        <li><a href="#">Классическая</a></li>
+        <li><a href="#">Острая</a></li>
+        <li><a href="#">Сырная</a></li>
+        <li><a href="#">Вегетарианская</a></li>
+        <li><a href="#">Комбо-наборы</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Контакты</h4>
+      <ul>
+        <li><a href="tel:+3752212345678">+375 221 234-56-78</a></li>
+        <li><a href="mailto:info@shaurmania.by">info@shaurmania.by</a></li>
+        <li><a href="#">г. Минск, ул. Немига, 5</a></li>
+        <li><a href="#">Ежедневно 10:00–02:00</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 ООО «ТестыПортфолио». УНП 123456789</span>
+    <span>Политика конфиденциальности · Публичная оферта</span>
+  </div>
+</footer>
+
+<!-- CART FLOAT -->
+<button class="cart-float" id="cartBtn" aria-label="Корзина" onclick="showCart()">
+  🛒 Корзина <span class="cart-count" id="cartCount">0</span>
+</button>
+
+<script src="main.js"></script>
+</body>
+</html>
